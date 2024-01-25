@@ -143,3 +143,63 @@ class God{
             super();
           };
         };
+
+  /*Sleigh Authentication
+  ____________________________
+  DESCRIPTION:
+  Christmas is coming and many people dreamed of having a ride with Santa's sleigh. But, of course, only Santa himself is allowed to use this wonderful transportation. And in order to make sure, that only he can board the sleigh, there's an authentication mechanism.
+
+Your task is to implement the authenticate() method of the sleigh, which takes the name of the person, who wants to board the sleigh and a secret password. If, and only if, the name equals "Santa Claus" and the password is "Ho Ho Ho!" (yes, even Santa has a secret password with uppercase and lowercase letters and special characters :D), the return value must be true. Otherwise it should return false.
+
+Examples:
+
+var sleigh = new Sleigh();
+sleigh.authenticate("Santa Claus", "Ho Ho Ho!"); // must return TRUE
+
+sleigh.authenticate("Santa", "Ho Ho Ho!"); // must return FALSE
+sleigh.authenticate("Santa Claus", "Ho Ho!"); // must return FALSE
+sleigh.authenticate("jhoffner", "CodeWars"); // Nope, even Jake is not allowed to use the sleigh ;) */
+
+// SOLUTION:
+function Sleigh() {}
+
+Sleigh.prototype.authenticate = function(name, password) {
+  let login = "Santa Claus";
+  let santaPassword = "Ho Ho Ho!"
+  if ((name == login) && (password == santaPassword)){
+    return true
+  }else{
+    return false
+  };
+};
+
+/* Fix the Bugs (Syntax) - My First Kata
+________________________________________
+  DESCRIPTION: 
+Fix the Bugs (Syntax) - My First Kata
+Overview
+Hello, this is my first Kata so forgive me if it is of poor quality.
+
+In this Kata you should fix/create a program that returns the following values:
+
+false/False if either a or b (or both) are not numbers
+a % b plus b % a if both arguments are numbers
+You may assume the following:
+
+If a and b are both numbers, neither of a or b will be 0.
+Language-Specific Instructions
+Javascript and PHP
+In this Kata you should try to fix all the syntax errors found in the code.
+
+Once you think all the bugs are fixed run the code to see if it works. A correct solution should return the values specified in the overview.
+
+Extension: Once you have fixed all the syntax errors present in the code (basic requirement), you may attempt to optimise the code or try a different approach by coding it from scratch.*/
+
+// SOLUTION:
+function myFirstKata(a, b){
+  if (typeof a === "number" && typeof b === "number"){
+    return ((a % b) + (b % a));
+  } else {
+    return false;
+  };
+};
