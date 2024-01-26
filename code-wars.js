@@ -203,3 +203,60 @@ function myFirstKata(a, b){
     return false;
   };
 };
+
+/* Sum of positive
+___________________
+DESCRIPTION: 
+You get an array of numbers, return the sum of all of the positives ones.
+
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+
+Note: if there is nothing to sum, the sum is default to 0. */
+
+// SOLUTION:
+function positiveSum(arr){
+  let result = 0;
+   for (let i = 0; i < arr.length; i++){
+    if (arr[i] > 0){
+        result += arr[i];
+              }
+       }
+       return result;
+}
+
+/* Convert a Number to a String!
+___________________
+DESCRIPTION: 
+We need a function that can transform a number (integer) into a string.
+
+What ways of achieving this do you know?
+
+Examples (input --> output):
+123  --> "123"
+999  --> "999"
+-100 --> "-100"*/
+
+// SOLUTION:
+function numberToString(num) {
+  return String(num);
+}
+
+/* Pirates!! Are the Cannons ready!??
+___________________
+DESCRIPTION: 
+Ahoy Matey!
+Welcome to the seven seas.
+You are the captain of a pirate ship.
+You are in battle against the royal navy.
+You have cannons at the ready.... or are they?
+Your task is to check if the gunners are loaded and ready, if they are: Fire!
+If they aren't ready: Shiver me timbers!
+Your gunners for each test case are 2, 3 or 4.
+When you check if they are ready their answers are in a dictionary and will either be: aye or nay
+Firing with less than all gunners ready is non-optimum (this is not fire at will, this is fire by the captain's orders or walk the plank, dirty sea-dog!)
+If all answers are 'aye' then Fire! if one or more are 'nay' then Shiver me timbers!*/
+
+// SOLUTION:
+const cannonsReady = (gunners) => {
+  return Object.values(gunners).includes('nay') ? 'Shiver me timbers!' : 'Fire!'
+ };
